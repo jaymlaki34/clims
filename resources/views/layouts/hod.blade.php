@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }} - Admin</title>
+    <title>{{ config('app.name', 'Laravel') }} - HOD</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,9 +22,6 @@
             <ul class="sidebar-nav">
                 <li class="active">
                     <a href="{{ route('home') }}"><i class="fa fa-home"></i>Home</a>
-                </li>
-                <li>
-                    <a href="{{ route('users') }}"><i class="fa fa-user"></i>Users</a>
                 </li>
             </ul>
         </aside>

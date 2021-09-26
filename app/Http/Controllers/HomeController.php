@@ -23,9 +23,9 @@ class HomeController extends Controller {
             return view('admin.home');
         } else if ($role === "HOD") {
             return view('hod.home');
-        } else if ($role === "COORDINATOR") {
+        } else if ($role === "LAB_COORDINATOR") {
             return view('coordinator.home');
-        } else if ($role === "TECHNICIAN") {
+        } else if ($role === "LAB_TECHNICIAN") {
             return view('technician.home');
         }
     }

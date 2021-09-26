@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container pt-5 mt-5">
+        @if (Session::get('fail'))
+            <div class="alert alert-danger">
+                {{ Session::get('fail') }}
+            </div>
+        @endif
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="py-3 card fadeIn" id="formContent">
