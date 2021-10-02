@@ -23,6 +23,9 @@
                 <li class="active">
                     <a href="{{ route('home') }}"><i class="fa fa-home"></i>Home</a>
                 </li>
+                <li>
+                    <a href="{{ route('home') }}"><i class="fa fa-home"></i>Equipments</a>
+                </li>
             </ul>
         </aside>
         <div id="navbar-wrapper">

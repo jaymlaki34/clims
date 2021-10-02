@@ -22,7 +22,7 @@
             {{ Session::get('fail') }}
         </div>
     @endif
-    <div class="container my-3">
+    <div class="my-3 container-fluid">
         <div class="d-flext justify-content-end">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Add New user

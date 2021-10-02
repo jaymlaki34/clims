@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CoordinatorController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,6 +21,9 @@ Route::middleware(['auth:web'])->group(function () {
     // Admin
     Route::get('/users', [AdminController::class, 'users'])->name('users');
     Route::post('/RegisterUser', [AdminController::class, 'RegisterUser'])->name('RegisterUser');
+    // Lab Coordinators
+    Route::get('/labs', [CoordinatorController::class, 'labs'])->name('labs');
+    Route::post('/RegisterLabs', [CoordinatorController::class, 'RegisterLabs'])->name('RegisterLabs');
     // Logout
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
