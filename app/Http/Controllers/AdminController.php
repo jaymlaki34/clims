@@ -19,6 +19,7 @@ class AdminController extends Controller {
     function RegisterUser(Request $request) {
         $request->validate([
             'first_name' => 'required',
+            'id_number' => 'required',
             'last_name' => 'required',
             'address' => 'required',
             'email' => 'required|email|unique:users,email',
@@ -29,6 +30,7 @@ class AdminController extends Controller {
         $capital_lname = strtoupper($request->last_name);
         $user = new User();
         $user->first_name = $request->first_name;
+        $user->id_number = $request->id_number;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->address = $request->address;

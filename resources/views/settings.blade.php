@@ -29,27 +29,29 @@
                     <div class="row">
                         <div class='col'>
                             <div class="form-group">
-                                <label for="">Full Name</label>
-                                <input required type="text" name="name" value="{{ auth()->user()->name }}" id=""
+                                <label for="">First Name</label>
+                                <input required type="text" name="fname" value="{{ auth()->user()->first_name }}" id=""
                                     class="form-control" placeholder="" aria-describedby="helpId">
                             </div>
 
                         </div>
+
                         <div class='col'>
                             <div class="form-group">
-                                <label for="">Email</label>
-                                <input required disabled type="text" value="{{ auth()->user()->email }}" name="email"
-                                    id="" class="form-control" placeholder="" aria-describedby="helpId">
+                                <label for="">Last Name</label>
+                                <input required type="text" name="lname" value="{{ auth()->user()->last_name }}" id=""
+                                    class="form-control" placeholder="" aria-describedby="helpId">
                             </div>
 
                         </div>
+
                     </div>
 
                     <div class="row">
                         <div class='col'>
                             <div class="form-group">
                                 <label for="">Phone Number</label>
-                                <input required type="text" name="phone" value="{{ auth()->user()->phone_number }}" id=""
+                                <input required type="text" name="phone" value="{{ auth()->user()->phone_no }}" id=""
                                     class="form-control" placeholder="" aria-describedby="helpId">
                             </div>
 
@@ -59,6 +61,24 @@
                                 <label for="">ID Number</label>
                                 <input required type="text" name="id" id="" value="{{ auth()->user()->id_number }}"
                                     class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class='col'>
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input required disabled type="text" value="{{ auth()->user()->email }}" name="email"
+                                    id="" class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+
+                        </div>
+                        <div class='col'>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input required  type="password" value="{{ auth()->user()->password }}" name="password"
+                                    id="" class="form-control" placeholder="" aria-describedby="helpId">
                             </div>
 
                         </div>

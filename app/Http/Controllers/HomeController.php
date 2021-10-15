@@ -36,14 +36,18 @@ class HomeController extends Controller {
 
     public function saveSettings(Request $request) {
         $request->validate([
-            'name' => 'required',
+            'fname' => 'required',
+            'lname' => 'required',
             'phone' => 'required',
+           'password'=> 'required|unique:users',
             'id' => 'required|unique:users',
         ]);
         $save = User::where('id', auth()->user()->id)->first();
-        $save->name = $request['name'];
-        $save->phone_number = $request['phone'];
+        $save->first_name = $request['fname'];
+        $save->last_name = $request['lname'];
+        $save->phone_no = $request['phone'];
         $save->id_number = $request['id'];
+        $save->password = $request['password'];
         $save->save();
         return redirect()->back()->with(['message' => 'Profile Updated successfully']);
     }

@@ -42,6 +42,7 @@
                 <table class="table table-hover table-striped" id="myTable">
                     <thead>
                         <tr>
+                            <th scope="col">ID number</th>
                             <th scope="col">First name</th>
                             <th scope="col">Last name</th>
                             <th scope="col">Role</th>
@@ -54,6 +55,7 @@
                     <tbody>
                         @foreach ($users as $user)
                             <tr>
+                                <td>{{ $user['id_number'] }}</td>
                                 <td>{{ $user['first_name'] }}</td>
                                 <td>{{ $user['last_name'] }}</td>
                                 <td>{{ $user['role'] }}</td>
@@ -99,7 +101,7 @@
                                 <div class="form-floating">
                                     <label for="last_name">{{ __('Last Name') }}</label>
                                     <input id="last_name" type="text" class="form-control " name="last_name"
-                                        placeholder="Last name" placeholder="First Name" value="{{ old('last_name') }}"
+                                        placeholder="Last name" placeholder="Last Name" value="{{ old('last_name') }}"
                                         required>
                                     @error('last_name')
                                         <span class="text-danger" role="alert">
@@ -129,15 +131,32 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="mb-3 form-floating">
-                            <label for="phone_no">{{ __('Phone number') }}</label>
-                            <input id="phone_no" type="phone" class="form-control" name="phone_no"
-                                placeholder="Phone number" value="{{ old('phone_no') }}" required>
-                            @error('phone_no')
-                                <span class="text-danger" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                        <div class="mb-3 row">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <label for="phone_no">{{ __('Phone number') }}</label>
+                                    <input id="phone_no" type="phone" class="form-control" name="phone_no"
+                                        placeholder="Phone number" value="{{ old('phone_no') }}" required>
+                                    @error('phone_no')
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <label for="id_number">{{ __('id number') }}</label>
+                                    <input id="id_number" type="text" class="form-control" name="id_number"
+                                        placeholder="Id number" value="{{ old('id_number') }}" required>
+                                    @error('id_number')
+                                        <span class="text-danger" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
                         </div>
                         <div class="row">
                             <div class="mb-3 col-md-6 form-group">

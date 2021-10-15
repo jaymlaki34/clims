@@ -12,7 +12,7 @@ class AuthController extends Controller {
             'password' => 'required'
         ]);
         $credentials = $request->only('email', 'password');
-        if (Auth::guard('web')->attempt($credentials)) {
+        if (Auth::guard('web')-> attempt($credentials)) {
             return redirect()->route('home');
         }
         return redirect()

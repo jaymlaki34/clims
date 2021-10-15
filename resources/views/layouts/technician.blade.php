@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }} - Technician</title>
+    <title>{{ config('app.name', 'CLIMS') }} - Technician</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div id="wrapper">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <h2>{{ config('app.name', 'Laravel') }}</h2>
+                <h2>{{ config('app.name', 'CLIMS') }}</h2>
             </div>
             <ul class="sidebar-nav">
                 <li class="active">

@@ -17,7 +17,7 @@ Route::post('/checkLogin', [AuthController::class, 'CheckLogin'])->name('checkLo
 Route::middleware(['auth:web'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
-    Route::get('/saveSettings', [HomeController::class, 'saveSettings'])->name('saveSettings');
+    Route::post('/saveSettings', [HomeController::class, 'saveSettings'])->name('saveSettings');
     // Admin
     Route::get('/users', [AdminController::class, 'users'])->name('users');
     Route::post('/RegisterUser', [AdminController::class, 'RegisterUser'])->name('RegisterUser');

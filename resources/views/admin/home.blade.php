@@ -1,5 +1,5 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h1>dfgfd</h1>
+    <h1>ADMIN contents</h1>
 @endsection
