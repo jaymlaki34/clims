@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.coordinator')
 
 @section('content')
     <div class="container">
@@ -77,7 +77,7 @@
                         <div class='col'>
                             <div class="form-group">
                                 <label for="">Password</label>
-                                <input required  type="password" value="{{ auth()->user()->password }}" name="password"
+                                <input required disabled  type="password" value="{{ auth()->user()->password }}" name="password"
                                     id="" class="form-control" placeholder="" aria-describedby="helpId">
                             </div>
 

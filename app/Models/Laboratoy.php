@@ -10,6 +10,7 @@ class Laboratoy extends Model {
     protected $fillable = [
         'id',
         'laboratory_name',
+        'lab_technician',
         'date_added'
     ];
 }

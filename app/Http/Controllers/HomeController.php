@@ -31,8 +31,19 @@ class HomeController extends Controller {
     }
 
     public function profile() {
-        return view('settings');
+        $role = Auth::user()->role;
+        if ($role === "ADMIN") {
+            return view('admin.settings');
+    } else if ($role === "HOD") {
+        return view('hod.settings');
+    } else if ($role === "LAB_COORDINATOR") {
+        return view('coordinator.settings');
+    } else if ($role === "LAB_TECHNICIAN") {
+        return view('technician.settings');
     }
+}
+
+
 
     public function saveSettings(Request $request) {
         $request->validate([

@@ -1,4 +1,4 @@
-@extends('layouts.coordinator')
+@extends('layouts.hod')
 
 @section('content')
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -7,7 +7,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                    <li class="breadcrumb-item">Labs</li>
+                    <li class="breadcrumb-item">Report</li>
                 </ol>
             </nav>
         </div>
@@ -23,11 +23,11 @@
         </div>
     @endif
     <div class="my-3 container-fluid">
-        <div class="d-flext justify-content-end">
+         {{-- <div class="d-flext justify-content-end">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Add New Laboratory
             </button>
-        </div>
+        </div> --}}
         @if (count($labs) <= 0)
             <div class="my-4 d-flex justify-content-center text-uppercase wow fadeInUp">
                 <img src="{{ asset('images/no_photo.png') }}" class="img-fluid" />
@@ -66,14 +66,14 @@
         @endif
     </div>
     <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        {{-- <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="text-center modal-title" id="exampleModalLabel">Add new User</h5>
                     <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('RegisterLabs') }}">
+                    <form method="POST" action="{{ route('RegisterReports') }}">
                         @csrf
                         <div class="mb-3 row">
                             <div class="col-12">
@@ -82,17 +82,6 @@
                                     <input id="laboratory_name" type="text" class="form-control " name="laboratory_name"
                                         placeholder="Laboratory name" value="{{ old('laboratory_name') }}" required>
                                     @error('laboratory_name')
-                                        <span class="text-danger" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-
-                                <div class="form-floating">
-                                    <label for="lab_technician">{{ __('Lab Technician') }}</label>
-                                    <input id="lab_technician" type="text" class="form-control " name="lab_technician"
-                                        placeholder="Laboratory name" value="{{ old('lab_technician') }}" required>
-                                    @error('lab_technician')
                                         <span class="text-danger" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -110,6 +99,6 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 @endsection

@@ -18,9 +18,11 @@ class CoordinatorController extends Controller {
     function RegisterLabs(Request $request) {
         $request->validate([
             'laboratory_name' => 'required',
+            'lab_technician'  => 'required',
         ]);
         $user = new Laboratoy();
         $user->laboratory_name = $request->laboratory_name;
+        $user->lab_technician = $request->lab_technician;
         $user->date_added = date('Y-m-d');
         $save = $user->save();
         if ($save) {
